@@ -15,18 +15,10 @@
         "laravel/socialite": "^2.0",
         "paypal/rest-api-sdk-php": "^1.13",
         "stripe/stripe-php": "^4.4",
-        "turbo124/laravel-push-notification": "dev-laravel5"
-      
- 
-        
+        "turbo124/laravel-push-notification": "dev-laravel5",
+        "tymon/jwt-auth": "0.5.*"  
     },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "9.0", 
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
-    },
+   
     "autoload": {
         "classmap": [
             "database"
