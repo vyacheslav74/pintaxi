@@ -13,8 +13,7 @@
         "laravel/framework": "5.3.*",
         "laravel/passport": "^1.0",
         "laravel/socialite": "^2.0",
-        "paypal/rest-api-sdk-php": "^1.13",
-        "stripe/stripe-php": "^4.4",
+       
         "turbo124/laravel-push-notification": "dev-laravel5",
         "tymon/jwt-auth": "0.5.*"  
     },
