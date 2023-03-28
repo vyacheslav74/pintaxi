@@ -3,7 +3,7 @@
   "builds": [
 	  {
       "src": "index.php",
-      "use": "@vercel/php-runtime",
+      "use": "@vercel/php@1.1.2",
       "config": { "maxLambdaSize": "50mb" }
     }
   ],
