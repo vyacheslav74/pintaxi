@@ -1,4 +1,3 @@
+# .vercelignore
+.env
 vendor
-node_modules
-asset
-public
