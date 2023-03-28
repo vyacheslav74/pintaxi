@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+build:
+  image: monachus/hugo
+  stage: build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  script:
+    - cd pintaxi.pages.dev/
+    - hugo
+  artifacts:
+    paths:
+      - pintaxi.pages.dev/public
+  only:
+    - master # this job will affect only the 'master' branch
+  tags:
+    - gitlab-org-docker #
+
+
+deploy:
+  image: timbru31/ruby-node:2.3
+  stage: deploy
+  script:
+    - wget https://github.com/cloudflare/wrangler/releases/download/v1.8.4/wrangler-v1.8.4-x86_64-unknown-linux-musl.tar.gz
+    - tar xvzf wrangler-v1.8.4-x86_64-unknown-linux-musl.tar.gz
+    - cd pintaxi.pages.dev/
+    - ../dist/wrangler publish
+  artifacts:
+    paths:
+      - pintaxi.pages.dev/public
+  only:
+    - master # this job will affect only the 'master' branch
+  tags:
+    - gitlab-org-docker #
