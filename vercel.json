@@ -1,7 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@now/static" },
-    { "src": "api/kalkulacia/index.py", "use": "@now/python" }  
+    "version": 2,
+   "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.5.3"
+    },
+  "routes": [
+    { "src": "/(.*)",  "dest": "/api/index.php" }
   ]
-}  
+}
+  }
+}
