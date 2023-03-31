@@ -1,8 +1,7 @@
 {
-    "version": 2,
-   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.5.3"
-    }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "api/kalkulacia/index.py", "use": "@now/python" }  
+  ]
 }
