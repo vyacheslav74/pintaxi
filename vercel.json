@@ -4,4 +4,4 @@
     { "src": "*.html", "use": "@now/static" },
     { "src": "api/kalkulacia/index.py", "use": "@now/python" }  
   ]
-}
+}  
