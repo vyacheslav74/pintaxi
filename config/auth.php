@@ -109,68 +109,7 @@ return [
     |
     */
 
-    'providers' => [
-        'accounts' => [
-            'driver' => 'eloquent',
-            'model' => App\Account::class,
-        ],
-
-        'fleets' => [
-            'driver' => 'eloquent',
-            'model' => App\Fleet::class,
-        ],
-
-        'dispatchers' => [
-            'driver' => 'eloquent',
-            'model' => App\Dispatcher::class,
-        ],
-
-        'support' => [
-            'driver' => 'eloquent',
-            'model' => App\SupportUser::class,
-        ],
-        
-
-        'accounts' => [
-            'driver' => 'eloquent',
-            'model' => App\Account::class,
-        ],
-
-        'fleets' => [
-            'driver' => 'eloquent',
-            'model' => App\Fleet::class,
-        ],
-
-        'cms' => [
-            'driver' => 'eloquent',
-            'model' => App\CmsUser::class,
-        ],
-        
-        'crm' => [
-            'driver' => 'eloquent',
-            'model' => App\CrmUser::class,
-        ],
-
-        'dispatchers' => [
-            'driver' => 'eloquent',
-            'model' => App\Dispatcher::class,
-        ],
-        'providers' => [
-            'driver' => 'eloquent',
-            'model' => App\Provider::class,
-        ],
-
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Admin::class,
-        ],
-
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
-    ],
-
+  
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
