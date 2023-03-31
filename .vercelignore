@@ -4,4 +4,8 @@ node_modules
 public
 resources
 bootstrap
+asset
+database
+tests
+routes
 
