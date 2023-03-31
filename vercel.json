@@ -1,8 +1,18 @@
 {
     "version": 2,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.5.2" }
-    },
+         "functions":
+ {
+    
+"api/test.js"
+:
+ {
+      
+"includeFiles"
+:
+ 
+"templates/**"
+    }
+  },
     "routes": [
         {
             "src": "/(.*)",
