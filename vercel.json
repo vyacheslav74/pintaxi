@@ -1,16 +1,9 @@
 {
     "version": 2,
          "functions":
- {
-    
-"api/test.js"
-:
- {
-      
-"includeFiles"
-:
- 
-"templates/**"
+ "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.6.0"
     }
   },
     "routes": [
