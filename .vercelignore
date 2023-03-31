@@ -8,5 +8,6 @@ asset
 database
 tests
 routes
-app
+config
+api
 
