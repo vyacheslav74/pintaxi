@@ -16,9 +16,8 @@
         "paypal/rest-api-sdk-php": "^1.13",
         "stripe/stripe-php": "^4.4",
         "turbo124/laravel-push-notification": "dev-laravel5",
-        "tymon/jwt-auth": "0.5.*"
- 
-        
+        "tymon/jwt-auth": "0.5.*",
+        "yoomoney/yookassa-sdk-php": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -62,7 +61,9 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true ,
-        "platform-check": false
+        "sort-packages": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }

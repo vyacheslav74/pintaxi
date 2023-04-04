@@ -1,6 +1,6 @@
 <?php 
 	$total_zones =	count( $data['zones'] ); 
-	$width 		 =	$total_zones * 	200;
+	$width 		 =	$total_zones * 	500;
 ?>
 
 @extends('dispatcher.layout.base')
@@ -85,8 +85,8 @@
 <script>
 	//All Varirables
 	var zones  = <?php echo json_encode( $data['zones'] ); ?>;
-	var current_lat		 =	48.9552626;
-	var current_long     =	-93.7065152;
+	var current_lat		 =	58.9552626;
+	var current_long     =	54.7065152;
 
 	var mapIcons = {
 		//user: '{{ asset("asset/img/marker-user.png") }}',

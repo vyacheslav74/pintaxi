@@ -122,6 +122,12 @@ class OAuthServerException extends \Exception
     {
         return new static('The user credentials were incorrect.', 6, 'invalid_credentials', 401);
     }
+    
+    public static function invalidDeviceToken()
+    {
+        //$errorMessage = 'User is not allowed to login on multiple devices.';
+        return new static('User is not allowed to login on multiple devices.', 6, 'invalid_credentials', 401);
+    }
 
     /**
      * Server error.

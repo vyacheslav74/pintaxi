@@ -19,6 +19,9 @@ use League\OAuth2\Server\Repositories\UserRepositoryInterface;
 use League\OAuth2\Server\RequestEvent;
 use League\OAuth2\Server\ResponseTypes\ResponseTypeInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use App\User;
+use App\ProviderDevice;
+use App\ProviderService;
 
 /**
  * Password grant class.
@@ -76,29 +79,44 @@ class PasswordGrant extends AbstractGrant
      */
     protected function validateUser(ServerRequestInterface $request, ClientEntityInterface $client)
     {
+        $device_id = $this->getRequestParameter('device_id', $request);
         $username = $this->getRequestParameter('username', $request);
+        $User = User::where('email',$username)->first();
+       
+        
+      
         if (is_null($username)) {
+            
             throw OAuthServerException::invalidRequest('username');
         }
-
+        
         $password = $this->getRequestParameter('password', $request);
         if (is_null($password)) {
+            
             throw OAuthServerException::invalidRequest('password');
         }
-
+        
         $user = $this->userRepository->getUserEntityByUserCredentials(
             $username,
             $password,
+            //$device_id,
             $this->getIdentifier(),
             $client
         );
+        
         if ($user instanceof UserEntityInterface === false) {
+            
             $this->getEmitter()->emit(new RequestEvent(RequestEvent::USER_AUTHENTICATION_FAILED, $request));
-
+            
             throw OAuthServerException::invalidCredentials();
+            
         }
-
+        
         return $user;
+        /*if(isset($device_id) && $User->device_id != $device_id){
+                
+            throw OAuthServerException::invalidDeviceToken();
+        }*/
     }
 
     /**

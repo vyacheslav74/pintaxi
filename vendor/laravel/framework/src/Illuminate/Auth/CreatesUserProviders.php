@@ -23,6 +23,7 @@ trait CreatesUserProviders
      */
     public function createUserProvider($provider)
     {
+    
         $config = $this->app['config']['auth.providers.'.$provider];
 
         if (isset($this->customProviderCreators[$config['driver']])) {

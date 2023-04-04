@@ -36,7 +36,7 @@
 			<div class="">
 				<a href="{{ url('/auth/google') }}"><button type="submit" class="btn btn-default" style="background-color:#f37151">LOGIN WITH GOOGLE+</button></a>
 			</div>
-		@endif -->
+		
 		 </div>
          <div class="col-md-8">
             <img src="{{ url('asset/front_dashboard/img/User-Login.png') }}" alt="Dispatcher Panel"> 

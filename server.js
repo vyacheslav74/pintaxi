@@ -1,7 +1,7 @@
 var app = require('express')(); 
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-var debug = require('debug')('PinTaxi:Chat');
+var debug = require('debug')('Tranxit:Chat');
 var request = require('request');
 var port = process.env.PORT || '3000';
 
@@ -59,7 +59,20 @@ io.on('connection', function (socket) {
 
         socket.broadcast.to( receiver ).emit('message', data);
 
-      
+        // url = 'http://dev.xuber.com/message/save?user_id='+data.user_id
+        // url = 'http://xuber.appoets.co/message/save?user_id='+data.user_id
+        // +'&provider_id='+data.provider_id
+        // +'&message='+data.message
+        // +'&type='+data.type
+        // +'&request_id='+socket.reqid;
+
+        // console.log(url);
+
+        // request(url, function (error, response, body) {
+        //     if (!error && response.statusCode == 200) {
+        //         // console.log(body); // Show the HTML for the Google homepage. 
+        //     }
+        // });
     });
 
     socket.on('disconnect', function(data) {

@@ -41,7 +41,7 @@ trait LogsoutGuard
      * @return string
      */
     public function logoutToPath() {
-        return '/';
+        return '/admin/login';
     }
 
     /**
